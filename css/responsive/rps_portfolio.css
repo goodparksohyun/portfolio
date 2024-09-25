@@ -315,6 +315,10 @@
     font-size: 4vw;
   }
 
+  .container .sc_intro {
+    height: 500px;
+  }
+
   /* 두번째 섹션 */
   .greetings {
     width: 100%;
