@@ -1,0 +1,568 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Protest+Guerrilla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap");
+
+/* 드레그 했을 때 */
+::selection {
+  background-color: thistle;
+  color: plum;
+}
+
+/* 스크롤 모양 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-image: linear-gradient(
+    -225deg,
+    rgba(170, 170, 255, 0.2),
+    rgba(255, 255, 255, 0.4)
+  );
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(20, 20, 30, 0.9);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* 마우스 무브 */
+.cursor_wrap {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  z-index: 9;
+  top: -100px;
+  left: -5px;
+}
+
+.rounded {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.pointed {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 20rem;
+}
+
+/* 전체 영역 */
+.wraper {
+  width: 100%;
+  height: auto;
+  background-image: url(../img/bg5.jpg);
+}
+
+/* 헤더 */
+header {
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 40px;
+  position: fixed;
+  z-index: 999;
+}
+
+header h1 {
+  font-weight: 100;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-family: "Bungee Shade", sans-serif;
+}
+
+.wraper .container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* 첫번째 섹션 */
+.container .sc_intro {
+  width: 100%;
+  height: 1073px;
+}
+
+.main-content,
+.greetings,
+.sc_works {
+  padding: 20px;
+}
+
+.start-page {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-content {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 2;
+}
+
+/* Introducing My Portfolio 글자 */
+#main-content1 {
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: blink1 2s ease-in-out;
+}
+
+.main-content p {
+  font-size: 4vw;
+}
+
+/* 공통 */
+#main-content1 .animated-text,
+#main-content2 .animated-text2 {
+  font-size: 90px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0px;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -ms-transition: 1s;
+  position: relative;
+}
+
+/* Shall we get started? 글자 */
+#main-content2 {
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: blink2 2s ease-in-out 2s forwards,
+    spacing 1s ease-in-out 2.5s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes blink1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spacing {
+  0% {
+    gap: 0px;
+  }
+  100% {
+    gap: 50px;
+  }
+}
+
+/* 감사합니다 글자 블러 처리 효과 */
+@keyframes blur {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+}
+
+/* 모든 섹션 */
+section {
+  display: block;
+  padding-bottom: 100px;
+}
+
+/* 두번째 섹션 */
+.greetings {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.greetings .greetings-page {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: 1s;
+}
+
+.greetings-page .greetings-text {
+  font-weight: bold;
+  font-size: 5vw;
+  text-align: center;
+  padding: 100px 0;
+  letter-spacing: 1vw;
+}
+
+.greetings .greetings-page .img-text {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  column-gap: 85px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+
+.greetings .greetings-page .img-text img {
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+}
+
+/* 나의 이야기와 포부 */
+.greetings .greetings-page .my-story {
+  width: 100%;
+  height: auto;
+  font-size: 1.6vw;
+  line-height: 50px;
+  top: -100px;
+  padding: 77px 135px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: transform 0.5s;
+}
+
+/* .my-story 마우스 오버시 */
+.greetings .greetings-page .my-story:hover {
+  transform: translateY(-10px);
+  cursor: default;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* 아래에서 올라오는 효과 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards; /* 애니메이션 적용 */
+}
+
+/* 세번째 섹션 */
+.sc_works .introduction-page {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: 1s;
+}
+
+.introduction-page .introduction-text {
+  font-weight: bold;
+  font-size: 5vw;
+  text-align: center;
+  padding: 100px 0;
+  letter-spacing: 1vw;
+}
+
+/* 웹 페이지 기능 종류 */
+.introduction-page .btns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+.introduction-page button {
+  width: fit-content;
+  height: auto;
+  background: #0000006e;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 7px 25px;
+  border-radius: 5px;
+  font: inherit;
+  font-weight: bold;
+  margin: 15px 10px;
+  cursor: pointer;
+}
+
+.introduction-page button:hover {
+  background-color: #ffffff5e;
+}
+
+/* 목업 이미지 모음 */
+.mockup-images {
+  width: 100%;
+  height: 476px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockup-images .wrap {
+  width: 634px;
+  height: auto;
+  position: relative;
+  transition: 0.5s;
+  transition: transform 0.5s ease;
+}
+
+/* 회전이 렉이 너무 심해서 주석 처리 */
+/* .mockup-images .wrap:hover {
+  transition: 1.5s;
+  transform: rotateY(360deg);
+} */
+
+.mockup-images .wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.mockup-images .wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.mockup-images .wrap .img {
+  position: relative;
+}
+
+.mockup-images .wrap .link-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.521);
+  padding: 30px;
+  box-sizing: border-box;
+  line-height: 1.5;
+  top: 0;
+  opacity: 0;
+}
+
+.mockup-images .wrap .link-wrap p {
+  font-size: 20px;
+}
+
+.mockup-images .wrap .link-wrap h2 {
+  font-weight: bold;
+  color: rgb(255, 252, 251);
+  font-size: 24px;
+}
+
+.wrap .link-wrap .hash_wrap {
+  margin-bottom: 20px;
+}
+
+.wrap .link-wrap .hash_wrap span {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+/* 링크 바로가기 */
+.wrap .link-wrap .links .link1 {
+  width: 125px;
+  height: 35px;
+  border-radius: 20px;
+  padding: 7px 16px;
+  background: #fff;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.wrap .link-wrap .links .link2 a {
+  font-size: 18px;
+  color: #fff;
+}
+
+.mockup-images .wrap:hover .link-wrap {
+  background-color: rgba(0, 0, 0, 0.521);
+}
+
+/* 풋터 */
+.footer {
+  text-align: center;
+  font-size: 50px;
+  line-height: 1.5;
+}
+
+.space-effect {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 0;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: 1s;
+}
+
+.footer .txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 100px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.footer .txt h3 {
+  font-weight: bold;
+  font-size: 5vw;
+  text-align: center;
+  letter-spacing: 1vw;
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 50%,
+    rgba(255, 255, 255, 0.3) 50%
+  );
+  background-size: 10% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* 부모 컨테이너 스타일 */
+.ellipse-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  transform: rotate(5deg);
+}
+
+.ellipse-svg {
+  width: 100%;
+  height: auto;
+  padding: 15px 0;
+}
+
+.small-circle {
+  animation: moveOnEllipse 4.5s linear infinite;
+}
+
+/* 애니메이션 */
+@keyframes moveOnEllipse {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+/* 링크들 */
+.footer .employment {
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.footer .employment .link-all {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer .employment .link-all a {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  padding: 20px;
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+/* 블로그 */
+.link-all .Tistory:hover {
+  transform: rotate(360deg);
+}
+
+/* 깃허브 */
+.link-all .Git-hub:hover {
+  transform: rotate(360deg);
+}
+
+/* 이메일 */
+.link-all .Email:hover {
+  transform: rotate(360deg);
+}
+
+/* 자기소개서 */
+.link-all .my-story:hover {
+  transform: rotate(360deg);
+}
+
+.footer .copyright {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #818181;
+  font-weight: bold;
+  margin-top: 35px;
+}
+
+/* 마우스 오버시 .link-wrap에 있는 모든 글자 나오기 */
+.mockup-images .wrap:hover .link-wrap {
+  opacity: 1;
+}
