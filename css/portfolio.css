@@ -317,12 +317,23 @@ section {
 }
 
 /* 세번째 섹션 */
+.sc_works {
+  display: block;
+}
+
 .sc_works .introduction-page {
   width: 100%;
   height: auto;
   opacity: 0;
   transform: translateY(20%);
+  -webkit-transform: translateY(20%);
+  -moz-transform: translateY(20%);
+  -ms-transform: translateY(20%);
+  -o-transform: translateY(20%);
   transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
 }
 
 .introduction-page .introduction-text {
@@ -373,7 +384,14 @@ section {
   height: auto;
   position: relative;
   transition: 0.5s;
+  -webkit-transition: transition 0.5s ease-in-out;
+  -moz-transition: transition 0.5s ease-in-out;
+  -o-transition: transition 0.5s ease-in-out;
+  -ms-transition: transition 0.5s ease-in-out;
   transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
 }
 
 /* 회전이 렉이 너무 심해서 주석 처리 */
@@ -463,10 +481,10 @@ section {
   padding: 150px 0;
   opacity: 0;
   transform: translateY(20%);
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
+  -webkit-transform: translateY(20%);
+  -moz-transform: translateY(20%);
+  -ms-transform: translateY(20%);
+  -o-transform: translateY(20%);
   transition: 1s;
   -webkit-transition: 1s;
   -moz-transition: 1s;
@@ -510,6 +528,10 @@ section {
   max-width: 1000px;
   margin: 0 auto;
   transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
 }
 
 .ellipse-svg {
@@ -520,6 +542,7 @@ section {
 
 .small-circle {
   animation: moveOnEllipse 4.5s linear infinite;
+  -webkit-animation: moveOnEllipse 4.5s linear infinite;
 }
 
 /* 애니메이션 */
