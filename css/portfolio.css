@@ -128,6 +128,10 @@ header h1 {
   width: 100%;
   text-align: center;
   transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
   z-index: 2;
 }
 
@@ -139,10 +143,16 @@ header h1 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   animation: blink1 2s ease-in-out;
+  -webkit-animation: blink1 2s ease-in-out;
+  -moz-animation: blink1 2s ease-in-out;
 }
 
 .main-content p {
@@ -170,7 +180,13 @@ header h1 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   animation: blink2 2s ease-in-out 2s forwards,
+    spacing 1s ease-in-out 2.5s forwards;
+  -webkit-animation: blink2 2s ease-in-out 2s forwards,
     spacing 1s ease-in-out 2.5s forwards;
   display: flex;
   align-items: center;
@@ -447,7 +463,14 @@ section {
   padding: 150px 0;
   opacity: 0;
   transform: translateY(20%);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
   transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
 }
 
 .footer .txt {

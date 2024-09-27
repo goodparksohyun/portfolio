@@ -64,6 +64,10 @@
   }
 
   /* 세번째 섹션 */
+  .sc_works {
+    display: block;
+  }
+
   .mockup-images {
     height: auto;
   }
@@ -375,6 +379,7 @@
   /* 풋터 */
   .footer {
     padding: 15px;
+    display: block;
   }
 
   .footer .txt h3 {
