@@ -50,66 +50,66 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // 맨 처음
-document.querySelector(".sc_intro").addEventListener("wheel", function (event) {
-  event.preventDefault();
-  const scrollAmount = event.deltaY;
+// document.querySelector(".sc_intro").addEventListener("wheel", function (event) {
+//   event.preventDefault();
+//   const scrollAmount = event.deltaY;
 
-  if (scrollAmount > 0) {
-    // 스크롤을 내릴 때
-    window.scrollTo({ top: worksSection.offsetTop, behavior: "smooth" });
-    // 첫번째 섹션에서 두번째 섹션으로 이동할때 .greetings-page 사라락 보여지기
-    const greetingsset = document.querySelector(".greetings-page");
-    setTimeout(() => {
-      greetingsset.style.opacity = 1;
-      greetingsset.style.transform = "translate(0)";
-    }, 300);
-  } else {
-    // 스크롤 올릴 때
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-});
+//   if (scrollAmount > 0) {
+//     // 스크롤을 내릴 때
+//     window.scrollTo({ top: worksSection.offsetTop, behavior: "smooth" });
+//     // 첫번째 섹션에서 두번째 섹션으로 이동할때 .greetings-page 사라락 보여지기
+//     const greetingsset = document.querySelector(".greetings-page");
+//     setTimeout(() => {
+//       greetingsset.style.opacity = 1;
+//       greetingsset.style.transform = "translate(0)";
+//     }, 300);
+//   } else {
+//     // 스크롤 올릴 때
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+//   }
+// });
 
-const sc_works = document.querySelector(".sc_works");
-const footer = document.querySelector("footer");
-// 두번째 섹션 스크롤
-worksSection.addEventListener("wheel", function (event) {
-  event.preventDefault();
-  const scrollAmount = event.deltaY;
+// const sc_works = document.querySelector(".sc_works");
+// const footer = document.querySelector("footer");
+// // 두번째 섹션 스크롤
+// worksSection.addEventListener("wheel", function (event) {
+//   event.preventDefault();
+//   const scrollAmount = event.deltaY;
 
-  if (scrollAmount > 0) {
-    // 두번째 섹션에서 스크롤을 내릴 때 .sc_works 세번째 섹션으로 이동
-    window.scrollTo({ top: sc_works.offsetTop, behavior: "smooth" });
-    // 두번째 섹션에서 세번째 섹션으로 이동할때 .introduction-page 사라락 보여지기
-    const introductionsset = document.querySelector(".introduction-page");
-    setTimeout(() => {
-      introductionsset.style.opacity = 1;
-      introductionsset.style.transform = "translate(0)";
-    }, 300);
-  } else {
-    // 두번째 섹션에서 스크롤을 올릴 때 .sc_intro 첫번째 섹션으로 이동
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-});
+//   if (scrollAmount > 0) {
+//     // 두번째 섹션에서 스크롤을 내릴 때 .sc_works 세번째 섹션으로 이동
+//     window.scrollTo({ top: sc_works.offsetTop, behavior: "smooth" });
+//     // 두번째 섹션에서 세번째 섹션으로 이동할때 .introduction-page 사라락 보여지기
+//     const introductionsset = document.querySelector(".introduction-page");
+//     setTimeout(() => {
+//       introductionsset.style.opacity = 1;
+//       introductionsset.style.transform = "translate(0)";
+//     }, 300);
+//   } else {
+//     // 두번째 섹션에서 스크롤을 올릴 때 .sc_intro 첫번째 섹션으로 이동
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+//   }
+// });
 
-// 세번째 섹션 스크롤
-sc_works.addEventListener("wheel", function (event) {
-  event.preventDefault();
-  const scrollAmount = event.deltaY;
+// // 세번째 섹션 스크롤
+// sc_works.addEventListener("wheel", function (event) {
+//   event.preventDefault();
+//   const scrollAmount = event.deltaY;
 
-  if (scrollAmount > 0) {
-    //세번째 섹션에서 스크롤 내릴 때 풋터로 이동
-    window.scrollTo({ top: footer.offsetTop, behavior: "smooth" });
-    // 세번째 섹션에서 풋터로 이동할때 .space-effect 사라락 보여지기
-    const spaceeffectset = document.querySelector(".space-effect");
-    setTimeout(() => {
-      spaceeffectset.style.opacity = 1;
-      spaceeffectset.style.transform = "translate(0)";
-    }, 300);
-  } else {
-    // 스크롤 올릴 때 두번째 섹션 .greetings로 이동
-    window.scrollTo({ top: worksSection.offsetTop, behavior: "smooth" });
-  }
-});
+//   if (scrollAmount > 0) {
+//     //세번째 섹션에서 스크롤 내릴 때 풋터로 이동
+//     window.scrollTo({ top: footer.offsetTop, behavior: "smooth" });
+//     // 세번째 섹션에서 풋터로 이동할때 .space-effect 사라락 보여지기
+//     const spaceeffectset = document.querySelector(".space-effect");
+//     setTimeout(() => {
+//       spaceeffectset.style.opacity = 1;
+//       spaceeffectset.style.transform = "translate(0)";
+//     }, 300);
+//   } else {
+//     // 스크롤 올릴 때 두번째 섹션 .greetings로 이동
+//     window.scrollTo({ top: worksSection.offsetTop, behavior: "smooth" });
+//   }
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
   // 각 버튼을 선택
