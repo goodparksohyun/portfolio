@@ -324,12 +324,12 @@ section {
 .sc_works .introduction-page {
   width: 100%;
   height: auto;
-  opacity: 0;
-  transform: translateY(20%);
+  opacity: 1;
+  /* transform: translateY(20%);
   -webkit-transform: translateY(20%);
   -moz-transform: translateY(20%);
   -ms-transform: translateY(20%);
-  -o-transform: translateY(20%);
+  -o-transform: translateY(20%); */
   transition: 1s;
   -webkit-transition: 1s;
   -moz-transition: 1s;
@@ -479,7 +479,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 150px 0;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(20%);
   -webkit-transform: translateY(20%);
   -moz-transform: translateY(20%);
